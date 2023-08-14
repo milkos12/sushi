@@ -582,3 +582,113 @@ img {
     bottom: -1rem;
     transform: rotate(25deg);
 }
+
+/*---------- footer ----------*/
+
+footer {
+    margin-top: 5rem;
+    padding: 1rem 2rem;
+}
+
+.footer__logo img {
+    width: 25px;
+}
+
+.footer__logo {
+    display: flex;
+    column-gap: 5px;
+    color: var(--title-color);
+}
+
+.footer__description {
+    margin-top: 1rem;
+    font-size: var(--small-font-size);
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    row-gap: 2rem;
+}
+
+.footer__title {
+    font-weight: 500;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+}
+
+.footer__links {
+    margin-top: 1rem;
+    font-size: var(--small-font-size);
+    line-height: 2.3rem;
+}
+
+.footer__links a {
+    color: var(--text-color);
+}
+
+.footer__information--address {
+    line-height: 1.3rem;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer__social i {
+    color: var(--firts-color);
+}
+
+.footer__container {
+    position: relative;
+}
+
+.footer__onion {
+    width: 40px;
+    position: absolute;
+    top: 2rem;
+    right: 10%;
+    transform: rotate(-40deg);
+}
+
+.footer__spinach {
+    position: absolute;
+    width: 30px;
+    bottom: -3.5rem;
+    left: 1rem;
+    transform: rotate(30deg);
+}
+
+.footer__leaf {
+    position: absolute;
+    width: 150px;
+    opacity: .2;
+    right: -4rem;
+    bottom: -5rem;
+}
+
+.footer__info {
+    display: grid;
+    padding-top: 6.5rem;
+    width: 100%;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+.footer__card img{
+    width: 35px;
+}
+
+.footer__card {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    width: 100%;
+}
+
+.footer__copy {
+    font-size: var(--small-font-size);
+}
