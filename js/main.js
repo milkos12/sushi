@@ -53,21 +53,49 @@ let current = 0;
 
 sections.forEach(section => {
     let heigthSection = section.clientHeight;
-    startsEndSections.push([current, current + heigthSection]);
-    current += heigthSection;
+    startsEndSections.push([current, current + heigthSection - 30]);
+    current += heigthSection - 30;
 });
 
 function comprobationScroll () {
-    for(let i = 0; i <= startsEndSections; i++) {
-        let actualSection = startsEndSections[i][0] >= this.scrollY && startsEndSections[i][1] >= this.scrollY? 0 : 1;
+    for(let i = 0; i <= startsEndSections.length; i++) {
+        let actualSection = this.scrollY >= startsEndSections[i][0] && this.scrollY <= startsEndSections[i][1] ? 1 : 0;
+        let idSection = sections[i].id;
+        let navName = document.getElementById(`nav_${idSection}`);
 
         if(actualSection) {
-            sections[i].classList.add('nav_ilumination-name');
+            navName.classList.add('nav_ilumination-name');
         } else {
-            sections[i].classList.remove('nav_ilumination-name');
+            navName.classList.remove('nav_ilumination-name');
         }
 
     }
 }
 
 window.addEventListener('scroll', comprobationScroll);
+
+
+
+function modeDarck() {
+    let buttonDarck = document.querySelector(".change-theme");
+    let body = document.body;
+    let listClass = buttonDarck.className;
+    let confirm = listClass.includes('ri-sun-line') == true? 0: 1;
+    
+    if(confirm) {
+        buttonDarck.classList.add('ri-sun-line');
+        buttonDarck.classList.remove('ri-moon-line')
+        body.classList.add('dark-theme');
+    } else {
+        buttonDarck.classList.remove('ri-sun-line');
+        buttonDarck.classList.add('ri-moon-line');
+        body.classList.remove('dark-theme');
+    }
+
+    
+}
+
+
+let buttonDarck = document.querySelector(".change-theme");
+buttonDarck.addEventListener('click', modeDarck);
+
