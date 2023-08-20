@@ -114,11 +114,13 @@ img {
     justify-content: center;
     padding: 0;
     margin: 0;
+    overflow: hidden;
+
 }
 
 .header {
     position: fixed;
-    width: 90%;
+    width: 100%;
     background-color: var(--body-color);
     top: 0;
     left: 0;
@@ -273,6 +275,8 @@ img {
 }
 
 .home__data {
+    display: grid;
+    justify-content: center;
     text-align: center; 
 }
 
@@ -327,9 +331,12 @@ img {
     transition: background .3s;
 }
 
+.home__button {
+    justify-self: center;
+}
+
 .home__button i, .button i {
     font-size: 1.5rem;
-    transform: translateX(0);
     transition: font-size .3s, transform .3s;
 }
 
@@ -377,6 +384,11 @@ img {
     vertical-align: top;
 }
 
+.about__data {
+    display: grid;
+    justify-content: center;
+}
+
 .about__data p {
     margin-top: 1.5rem;
 }
@@ -396,6 +408,9 @@ img {
     font-weight: 500;
     text-align: center;
 }
+
+
+/*--------------- popular ------------------*/
 
 .popular__container {
     margin-top: 6rem;
@@ -499,6 +514,12 @@ img {
     right: 0rem;
     width: 25px;
     transform: rotate(30deg);
+}
+
+.recently__img {
+    margin-top: 2rem;
+    width: 400px;
+    justify-self: center;
 }
 
 .recently__description {
@@ -620,6 +641,7 @@ img {
 /*---------- footer ----------*/
 
 footer {
+    overflow: hidden;
     margin-top: 5rem;
     padding: 1rem 2rem;
 }
@@ -746,7 +768,7 @@ footer {
 /*------ scroll nav styles ------*/
 
 ::-webkit-scrollbar {
-    width: .6rem;
+    
     border-radius: .5rem;
     background-color: hsl(19, 8%, 75%);
 }
@@ -807,4 +829,9 @@ body.dark-theme {
 body {
     background-color: .3s;
     width: 100%;
+}
+
+p {
+    max-width: 450px;
+    text-align: center;
 }
