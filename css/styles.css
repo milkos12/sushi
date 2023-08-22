@@ -765,6 +765,11 @@ footer {
     font-size: var(--small-font-size);
 }
 
+.footer__description {
+    width: auto;
+    text-align: start;
+}
+
 /*------ scroll nav styles ------*/
 
 ::-webkit-scrollbar {

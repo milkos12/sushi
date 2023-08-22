@@ -99,3 +99,19 @@ function modeDarck() {
 let buttonDarck = document.querySelector(".change-theme");
 buttonDarck.addEventListener('click', modeDarck);
 
+
+
+
+function hiddenButtomMenuWidth() {
+   let widht = window.innerWidth;
+   let toggle = document.getElementById('nav-toggle');
+   console.log(widht)
+   if(widht >= 1150) {
+        toggle.classList.add('nav__toggle__pc');
+   } else {
+        toggle.classList.remove('nav__toggle__pc');
+   }
+}
+
+hiddenButtomMenuWidth();
+window.addEventListener('resize', hiddenButtomMenuWidth);
