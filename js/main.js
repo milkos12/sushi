@@ -3,6 +3,8 @@ const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const navClose = document.getElementById('nav-close');
 
+
+
 if (navToggle) {
     navToggle.addEventListener('click', ()=>{
         navMenu.classList.add('nav__menu--show');
@@ -115,3 +117,22 @@ function hiddenButtomMenuWidth() {
 
 hiddenButtomMenuWidth();
 window.addEventListener('resize', hiddenButtomMenuWidth);
+
+
+const scrollreveal = ScrollReveal({
+    distance: '30px',
+    duration: 2000,
+    delay: 10,
+});
+
+scrollreveal.reveal('.home__img');
+scrollreveal.reveal('.home__data', {
+    origin: 'top'
+});
+
+scrollreveal.reveal('.about__container--img, .popular__card, .recently__data, .recently__img, .newsletter__container, .newsletter__spinach-leaf, .footer__logo, .footer__description, .footer__onion, .footer__spinach, .footer__title, .footer__links, .ri-facebook-circle-fill')
+scrollreveal.reveal('.about__data',{
+    origin: 'top'
+})
+
+
