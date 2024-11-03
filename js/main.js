@@ -107,11 +107,17 @@ buttonDarck.addEventListener('click', modeDarck);
 function hiddenButtomMenuWidth() {
    let widht = window.innerWidth;
    let toggle = document.getElementById('nav-toggle');
-   console.log(widht)
-   if(widht >= 1150) {
+   let nav = document.getElementById('nav-menu');
+   let listClass = document.getElementById('nav__list');
+
+   if(widht >= 915) {
         toggle.classList.add('nav__toggle__pc');
+        nav.classList.remove('nav__menu');
+        listClass.classList.remove('nav__list');
    } else {
         toggle.classList.remove('nav__toggle__pc');
+        nav.classList.add('nav__menu');
+        listClass.classList.add('nav__list');
    }
 }
 
